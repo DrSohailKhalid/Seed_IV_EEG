@@ -449,7 +449,14 @@ plt.ylabel('Loss')
 plt.legend()
 
 plt.tight_layout()
-plt.savefig('model_learning_curves.png')
+plt.savefig(
+    "model_learning_curves_highres.png",
+    dpi=300,           # High resolution (300–600 dpi for print)
+    bbox_inches="tight",  # Remove extra white margins
+    facecolor="white",   # Background color
+    transparent=False
+)
+
 plt.close()
 
 # Plot per-class performance
